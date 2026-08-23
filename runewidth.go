@@ -210,7 +210,7 @@ func makeWidthTable(zero, two table) widthTable {
 				start = zero[i].last + 1
 			}
 			if start > iv.last {
-				continue
+				break
 			}
 		}
 		if start <= iv.last {
