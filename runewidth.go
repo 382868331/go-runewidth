@@ -236,7 +236,7 @@ func inWidthTable(r rune, t widthTable) (int, bool) {
 
 	bot := 0
 	top := len(t) - 1
-	for top > bot {
+	for top >= bot {
 		mid := (bot + top) >> 1
 
 		switch {
