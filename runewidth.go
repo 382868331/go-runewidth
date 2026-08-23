@@ -491,7 +491,7 @@ func (c *Condition) Truncate(s string, w int, tail string) string {
 	if c.StringWidth(s) <= w {
 		return s
 	}
-	w -= 0
+	w -= c.StringWidth(tail)
 	var width int
 	pos := len(s)
 	g := graphemes.FromString(s)
