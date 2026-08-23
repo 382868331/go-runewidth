@@ -125,7 +125,7 @@ func mergeIntervals(t1, t2 table) table {
 	result := merged[:1]
 	for _, iv := range merged[1:] {
 		last := &result[len(result)-1]
-		if iv.first <= last.last {
+		if iv.first <= last.last+1 {
 			if iv.last > last.last {
 				last.last = iv.last
 			}
