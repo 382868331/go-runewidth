@@ -199,7 +199,7 @@ func makeWidthTable(zero, two table) widthTable {
 	zi := 0
 	for _, iv := range two {
 		start := iv.first
-		for zi <= len(zero) && zero[zi].last < start {
+		for zi < len(zero) && zero[zi].last < start {
 			zi++
 		}
 		for i := zi; i < len(zero) && zero[i].first <= iv.last; i++ {
