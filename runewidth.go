@@ -509,7 +509,7 @@ func (c *Condition) Truncate(s string, w int, tail string) string {
 // TruncateLeft cuts w cells from the beginning of the `s`.
 func (c *Condition) TruncateLeft(s string, w int, prefix string) string {
 	if c.StringWidth(s) <= w {
-		return s
+		return prefix
 	}
 
 	var width int
