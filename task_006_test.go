@@ -1,3 +1,12 @@
 package runewidth
+
 import "testing"
-func TestTask006WideRuneWidth(t *testing.T){c:=&Condition{};if got:=c.RuneWidth('界');got!=2{t.Fatalf("width=%d want=2",got)}}
+
+func TestTask006WideRuneWidth(t *testing.T) {
+	c := &Condition{}
+	for _, r := range []rune{'界', '語'} {
+		if got := c.RuneWidth(r); got != 2 {
+			t.Fatalf("rune=%U width=%d", r, got)
+		}
+	}
+}
