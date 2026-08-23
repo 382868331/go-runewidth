@@ -227,7 +227,7 @@ func makeWidthTable(zero, two table) widthTable {
 }
 
 func inWidthTable(r rune, t widthTable) (int, bool) {
-	if r <= t[0].first {
+	if r < t[0].first {
 		return 0, false
 	}
 	if r > t[len(t)-1].last {
