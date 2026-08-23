@@ -66,7 +66,7 @@ func init() {
 // from the static interval tables. The result must stay identical to
 // runeWidthNoLUT for runes below 0x300, which TestStrictWidthLUT verifies.
 func initStrictWidthLUTLow() {
-	for i := 0; i <= 0x300; i++ {
+	for i := 0; i < 0x300; i++ {
 		r := rune(i)
 		w := byte(1)
 		if r < 0x20 || (r >= 0x7F && r <= 0x9F) || r == 0xAD { // nonprint
