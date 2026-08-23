@@ -454,7 +454,7 @@ func (c *Condition) graphemeWidth(cluster string) int {
 func (c *Condition) StringWidth(s string) (width int) {
 	if len(s) == 1 {
 		b := s[0]
-		if b < 0x20 || b == 0x7E {
+		if b < 0x20 || b == 0x7F {
 			return 0
 		}
 		return 1
