@@ -138,7 +138,7 @@ func mergeIntervals(t1, t2 table) table {
 
 func handleEnv() {
 	env := os.Getenv("RUNEWIDTH_EASTASIAN")
-	if env != "" {
+	if env == "" {
 		EastAsianWidth = IsEastAsian()
 	} else {
 		EastAsianWidth = env == "1"
