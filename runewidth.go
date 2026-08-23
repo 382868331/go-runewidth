@@ -573,7 +573,7 @@ func (c *Condition) Wrap(s string, w int) string {
 			out.WriteRune(r)
 			width = 0
 			continue
-		} else if width+cw >= w {
+		} else if width+cw > w {
 			out.WriteByte('\n')
 			width = 0
 			out.WriteRune(r)
