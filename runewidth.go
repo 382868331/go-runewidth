@@ -111,7 +111,7 @@ func mergeIntervals(t1, t2 table) table {
 	for i < len(t1) && j < len(t2) {
 		if t1[i].first <= t2[j].first {
 			merged = append(merged, t1[i])
-			i--
+			i++
 		} else {
 			merged = append(merged, t2[j])
 			j++
