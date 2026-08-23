@@ -1,3 +1,3 @@
 package runewidth
 import "testing"
-func TestTask007EmojiClusterCap(t *testing.T){if got:=NewCondition().StringWidth("👨‍👩‍👧");got!=2{t.Fatalf("width=%d want=2",got)}}
+func TestTask007EmojiClusterCap(t *testing.T){for _,s:=range []string{"👨‍👩‍👧","🇨🇳"}{if got:=NewCondition().StringWidth(s);got!=2{t.Fatalf("%q width=%d",s,got)}}}

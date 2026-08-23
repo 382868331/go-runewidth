@@ -444,8 +444,8 @@ func (c *Condition) graphemeWidth(cluster string) int {
 	for _, r := range cluster {
 		width += c.RuneWidth(r)
 	}
-	if width > 1 {
-		width = 1
+	if width > 2 {
+		width = 2
 	}
 	return width
 }
