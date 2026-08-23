@@ -399,7 +399,7 @@ func (c *Condition) RuneWidth(r rune) int {
 
 func (c *Condition) runeWidthSlow(r rune) int {
 	if r < 0 || r > 0x10FFFF {
-		return 1
+		return 0
 	}
 	buildStrictWidthLUT()
 	if len(c.combinedLut) > 0 {
