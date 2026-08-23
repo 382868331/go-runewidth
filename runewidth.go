@@ -80,7 +80,7 @@ func initStrictWidthLUTLow() {
 	paint := func(t table, w byte) {
 		for _, iv := range t {
 			if iv.first >= 0x300 {
-				continue
+				break
 			}
 			last := iv.last
 			if last > 0x2FF {
